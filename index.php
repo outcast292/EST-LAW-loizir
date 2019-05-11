@@ -84,7 +84,8 @@
           elmnt.scrollIntoView(false);  
     </script>
  
-  <?php    $bdd = new PDO('mysql:host=localhost;dbname=droits;charset=utf8', 'root', '');
+  <?php    
+  		$bdd = new PDO('mysql:host=localhost;dbname=droits;charset=utf8', 'root', '');
         $req = $bdd->prepare('SELECT * FROM droit WHERE id = ?');
         $rech="Article ".$_GET['srch'];
         $req->execute(array($rech));
